@@ -1,5 +1,5 @@
 
-POST http://localhost:3000/clients HTTP/1.1
+POST http://localhost:8080/clients HTTP/1.1
 Content-Type: application/json
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json
 
 ###
 
-POST http://localhost:3000/accounts HTTP/1.1
+POST http://localhost:8080/accounts HTTP/1.1
 Content-Type: application/json
 
 {
@@ -22,7 +22,7 @@ POST http://localhost:8080/transactions HTTP/1.1
 Content-Type: application/json
 
 {
-    "account_id_from": "f8df753c-3b58-43aa-8016-12aaa4f1ea3e",
-    "account_id_to": "0216ea38-524f-4e85-8743-d484a8f7538e",
+    "account_id_from": "a98934ae-1ae0-4bd0-96c9-fa2c980a6de2",
+    "account_id_to": "b7ee83f3-866a-4b52-a17b-477acd1a2bd1",
     "amount": 1
 }
