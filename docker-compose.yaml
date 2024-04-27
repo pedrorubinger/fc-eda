@@ -26,10 +26,24 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: wallet
       MYSQL_PASSWORD: root
+      MYSQL_TCP_PORT: 33061
     ports:
-      - 3306:3306
+      - 33061:33061
     volumes:
       - .docker/mysql:/var/lib/mysql
+
+  mysqlbalance:
+    image: mysql:5.7
+    platform: linux/amd64
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: balance
+      MYSQL_PASSWORD: root
+      MYSQL_TCP_PORT: 33062
+    ports:
+      - 33062:33062
+    volumes:
+      - .docker/mysql_balance:/var/lib/mysql
 
   zookeeper:
     image: "confluentinc/cp-zookeeper:6.1.0"
@@ -80,4 +94,3 @@ services:
       CONTROL_CENTER_MONITORING_INTERCEPTOR_TOPIC_PARTITIONS: 1
       CONFLUENT_METRICS_TOPIC_REPLICATION: 1
       PORT: 9021
-  
