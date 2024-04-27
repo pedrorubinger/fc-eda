@@ -11,6 +11,3 @@ start_wallet:
 
 start_balance:
 	cd balance && go run cmd/main.go
-
-enter:
-	docker exec -it fc-eda-goapp-1 bash
