@@ -4,10 +4,20 @@ services:
   goapp: 
     build: .
     platform: linux/amd64
+    command: make start_wallet
     volumes:
       - .:/app
     ports:
       - 8080:8080
+
+  goappbalance: 
+    build: .
+    platform: linux/amd64
+    command: make start_balance
+    volumes:
+      - .:/app
+    ports:
+      - 3003:3003
 
   mysql:
     image: mysql:5.7
